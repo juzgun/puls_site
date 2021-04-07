@@ -1,0 +1,35 @@
+.feedback {
+    padding: 0 0 70px 0;
+    &-item {
+        display: flex;
+        min-height: 169px;
+        margin-top: 70px;
+        &__img {
+            height: 169px;
+            width: 169px;
+            border-radius: 50%;
+            margin-right: 70px;
+        }
+        &__wrapper {
+            display: block;
+            width: 650px;
+        }
+        &__name {
+            color: #0d0d0d;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        &__achievements {
+            color: #646464;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24px;
+        }
+        &__descr {
+            padding-top: 20px;
+            color: #0d0d0d;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+}
