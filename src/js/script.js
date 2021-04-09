@@ -62,10 +62,35 @@ $(document).ready(function () {
             $('.overlay, #order').fadeIn('slow');
         });
     });
-    $('.button_mini').each(function (i) {
-        $(this).on('click', function () {
-            $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text());
-            $('.overlay, #order').fadeIn('slow');
+
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 2
+                },
+                phone: "required",
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Пожалуйста введите свое имя",
+                    minlength: jQuery.validator.format("Имя должно содержать по крайне мере {0} символа!")
+                },
+                phone: "Пожалуйста введите свой номер телефона",
+                email: {
+                    required: "Пожалуйста введите свою почту",
+                    email: "Неправильный адрес почты"
+                }
+            }
         });
-    });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
 });
