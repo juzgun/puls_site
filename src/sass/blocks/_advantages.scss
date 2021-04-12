@@ -24,6 +24,14 @@
             margin-bottom: 20px;
         }
     }
+    &__icon {
+        &_animated {
+            animation: heartbeat 1.6s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
+        }
+    }
     &__title {
         color: #0d0d0d;
         font-size: 18px;
