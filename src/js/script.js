@@ -52,9 +52,10 @@ $(document).ready(function () {
         $('.overlay, #consultation').fadeIn('slow');
     });
 
-    $('.modal__close').on('click', function () {
+    $('.modal__close, .overlay').on('click', function () {
         $('.overlay, #consultation, #order, #thanks').fadeOut('slow');
     });
+
 
     $('.button_mini').each(function (i) {
         $(this).on('click', function () {
